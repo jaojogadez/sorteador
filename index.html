@@ -19,7 +19,7 @@
     </div>
     <div class="container px-5">
       <div class="row gx-5 align-items-center">
-        <div class="col-md-6 mt-4">
+        <div class="col-md-6 my-4">
           <div class="mb-5">
             <p class="text-secondary">Online - Gratuito</p>
             <h1>Sorteador de Números</h1>
@@ -44,7 +44,30 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6"></div>
+        <form class="col-md-6" method="post">
+          <div class="container mb-4">
+            <h4>Quero sortear:</h4>
+            <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+          </div>
+          <div class="container row mb-4">
+            <div class="col-3">
+              <label for="numbers">Números</label>
+              <input type="text" name="numbers" id="numbers" class="form-control">
+            </div>
+            <div class="col-3">
+              <label for="numbers-start">De</label>
+              <input type="text" name="numbers" id="numbers-start" class="form-control">
+            </div>
+            <div class="col-3">
+              <label for="numbers-end">ate</label>
+              <input type="text" name="numbers" id="numbers-end" class="form-control">
+            </div>
+          </div>
+          <div class="mb-4 mx-3 position-relative switch">
+            <button class="shadow" type="button"></button>
+            <span></span>
+          </div>
+        </form>
       </div>
     </div>
     <script src="script.js"></script>

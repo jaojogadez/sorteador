@@ -81,3 +81,57 @@ html {
   left: 0;
   top: 0;
 }
+form h4 {
+  font: var(--label-medium);
+  color: var(--content-primary);
+  text-transform: uppercase;
+}
+form p {
+  font: var(--paragraph-large);
+  color: var(--content-secondary);
+  margin: 0;
+}
+form .col-3 {
+  justify-content: center;
+  width: max-content;
+  text-align: center;
+}
+form label {
+  font: var(--label-small);
+  color: var(--content-secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+form .form-control {
+  background-color: var(--background-secondary);
+  border: 0;
+  width: 86px;
+  height: 56px;
+}
+form label,
+form .form-control{
+  align-self: self-start;
+}
+form .switch {
+  width: 30px;
+}
+form .switch button {
+  width: 14px;
+  height: 14px;
+  background: var(--content-primary);
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+form .switch span {
+  display: block;
+  width: 30px;
+  height: 20px;
+  /* background: var(--gradient-background); */
+  background-image: linear-gradient( #d586e0 0%, #91a1fa 98.93%);
+  border-radius: 16px;
+}
