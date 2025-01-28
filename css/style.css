@@ -28,9 +28,56 @@
   --display-large: bolder 72px/130% "Sora";
   --display-medium: bolder 40px/130% "Sora";
   --display-small: bold 32px/130% "Sora";
-  --over-line: bold 16px/150% "Roboto Mono";
+  --over-line: bold 20px/150% "Roboto Mono";
   --paragraph-large: normal 16px/150% "Roboto Flex";
   --paragraph-medium: normal 14px/150% "Roboto Flex";
   --label-medium: bold 20px/150% "Roboto Flex";
   --label-small: bold 16px/150% "Roboto Flex";
+}
+
+body,
+html {
+  background: var(--background-primary) url("../assets/Shapes.png") repeat
+    center;
+  min-height: 96vh;
+}
+.container h2 {
+  font: var(--display-small);
+  color: var(--content-primary);
+  text-transform: uppercase;
+  margin: 0;
+}
+.container h1 {
+  font: var(--display-large);
+  color: var(--content-primary);
+  text-transform: uppercase;
+  margin: 0;
+}
+.row .col-md-6 .text-secondary {
+  font: var(--over-line);
+  background: linear-gradient(90deg, var(--gradient-content));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container-sm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container-sm .col h3 {
+  font: var(--paragraph-medium);
+  color: var(--content-brand);
+  text-transform: uppercase;
+  margin: 0;
+}
+.container-sm .col p {
+  font: var(--paragraph-medium);
+  color: var(--content-secondary);
+  margin: 0;
+}
+.container-sm .img-fluid {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
