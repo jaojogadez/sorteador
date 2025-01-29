@@ -44,7 +44,7 @@
             </div>
           </div>
         </div>
-        <form class="col-md-6" method="post">
+        <form class="col-md-6 border" method="post">
           <div class="container mb-4">
             <h4>Quero sortear:</h4>
             <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
@@ -63,10 +63,17 @@
               <input type="text" name="numbers" id="numbers-end" class="form-control">
             </div>
           </div>
-          <div class="mb-4 mx-3 position-relative switch">
-            <button class="shadow" type="button"></button>
-            <span></span>
+          <div class="d-flex">
+            <div class="mb-4 mx-3 position-relative switch">
+              <button class="shadow" type="button"></button>
+              <span></span>
+            </div>
+            <p>Não repetir número</p>
           </div>
+          <button type="submit" class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-1">
+            <p>Sortear</p>
+            <img src="assets/icons/Frame 2.png" alt="icone-seta">
+          </button>
         </form>
       </div>
     </div>
