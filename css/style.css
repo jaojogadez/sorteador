@@ -111,7 +111,7 @@ form .form-control {
   border: 0;
   width: 86px;
   height: 56px;
-  font: var(--display-medium);
+  font: var(--display-small);
 }
 form .form-control:hover {
   color: var(--content-primary);
@@ -201,6 +201,9 @@ form .btn-primary:active{
 @media (max-width: 768px) {
   .container h1 {
     font-size: 62px !important;
+  }
+  #container-logo {
+    justify-content: center;
   }
 }
 @media (max-width: 546px) {
