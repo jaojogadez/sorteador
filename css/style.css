@@ -34,7 +34,12 @@
   --label-medium: bold 20px/150% "Roboto Flex";
   --label-small: bold 16px/150% "Roboto Flex";
 }
-
+#result span {
+  font: var(--display-large);
+  color: var(--content-brand);
+  margin: 1rem;
+  font-size: 3em;
+}
 body,
 html {
   background: var(--background-primary) url("../assets/Shapes.png") repeat
@@ -84,12 +89,12 @@ html {
   left: 0;
   top: 0;
 }
-form h4 {
+form h4 , #result h4{
   font: var(--label-medium);
   color: var(--content-primary);
   text-transform: uppercase;
 }
-form p {
+form p , #result p{
   font: var(--paragraph-large);
   color: var(--content-secondary);
   margin: 0;
@@ -197,7 +202,51 @@ form .container-md:hover::before{
 form .btn-primary:active{
   background-color: var(--background-secondary) !important;
 }
-
+#result .btn-primary {
+  height: 56px;
+  background-color: var(--background-tertiary);
+  border: 0;
+  transition: all .2s ease;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  overflow: hidden;
+}
+#result .btn-primary p {
+  font: var(--label-medium);
+  color: var(--content-primary);
+  text-transform: uppercase;
+  margin: 0;
+}
+#result .btn-primary:hover {
+  background-color: var(--background-secondary);
+}
+#result .container-md {
+  position: relative;
+  padding: 0;
+}
+#result .container-md::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(90deg, var(--gradient-border));
+  border-radius: .45rem;
+  transition: all .4s ease;
+  opacity: 0;
+  left: 0;
+  z-index: -1px;
+}
+#result .container-md:hover::before{
+  opacity: 1 ;
+  transform: scale(1.01, 1.1);
+}
+#result .btn-primary:active{
+  background-color: var(--background-secondary) !important;
+}
+#result {
+  transition: all .2s ease-in-out;
+}
 @media (max-width: 768px) {
   .container h1 {
     font-size: 62px !important;
