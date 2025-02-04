@@ -23,7 +23,7 @@
         <div class="col-md-6 my-4">
           <div class="m-0" id="title">
             <p class="text-secondary">Online - Gratuito</p>
-            <h1>Sorteador de Números</h1>
+            <h1 class="w-100">Sorteador de Números</h1>
           </div>
         </div>
         <form class="col-md-6 mb-4" method="post">
@@ -31,12 +31,12 @@
             <h4>Quero sortear:</h4>
             <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
           </div>
-          <div class="container d-flex gap-3 mb-4">
+          <div class="container d-flex mb-4">
             <div class="col-md-3">
               <label for="numbers">Números</label>
               <input type="text" name="numbers" id="numbers" class="form-control">
             </div>
-            <div class="col-md-3 mx-3">
+            <div class="col-md-3">
               <label for="numbers-start">De</label>
               <input type="text" name="numbers" id="numbers-start" class="form-control">
             </div>
@@ -64,12 +64,9 @@
             <h4>Resultado do sorteio:</h4>
             <p class="text-uppercase fw-bold">1º Resultado</p>
           </div>
-          <div class="container mb-4">
-            <span id="numberOne">23</span>
-            <!-- <span id="numberTwo">12</span> -->
-          </div>
+          <div class="container mb-4" id="resultValues"></div>
           <div class="container-md mb-4 ">
-            <button type="submit" class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-1">
+            <button type="submit" class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-1" onclick="sortearRandomNumber()">
               <p>Sortear Novamente </p>
               <img src="assets/icons/Frame 3.png" alt="icone-seta">
             </button>

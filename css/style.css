@@ -25,7 +25,7 @@
   --gradient-background: #d586e0 0%, #91a1fa 98.93%;
   --gradient-content: #c7c9cc 0%, #3d3d3d 100%;
   /* FONT */
-  --display-large: bolder 5vw/130% "Sora";
+  --display-large: bolder 72px/130% "Sora";
   --display-medium: bolder 40px/130% "Sora";
   --display-small: bold 32px/130% "Sora";
   --over-line: bold 20px/150% "Roboto Mono";
@@ -59,6 +59,7 @@ html {
   font: var(--display-large);
   color: var(--content-primary);
   text-transform: uppercase;
+  width: 327px;
   margin: 0;
 }
 .row .col-md-6 .text-secondary {
@@ -253,6 +254,9 @@ form .btn-primary:active{
   }
   #container-logo {
     justify-content: center;
+  }
+  .container .d-flex {
+    gap: 1rem;
   }
 }
 @media (max-width: 546px) {
