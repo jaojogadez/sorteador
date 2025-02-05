@@ -82,7 +82,6 @@ $form.onsubmit = (event) => {
   } else {
     sortearRandomNumber();
   }
-
 };
 
 inputs.map((input) => {
@@ -95,10 +94,10 @@ let onlyNumbersFormat = (input) => {
   return input.value.replace(/\D/g, "").slice(0, 3);
 };
 
-const results = []
-let round = 1
+const results = [];
+let round = 1;
 
-let sortearRandomNumber = (startNumber, endNumber) => {
+let sortearRandomNumber = () => {
   // Pegar o total de resultados
   const totalNumbers = Number($totalNumbers.value);
 
@@ -109,29 +108,32 @@ let sortearRandomNumber = (startNumber, endNumber) => {
   const endNumbers = Number($endNumbers.value);
 
   // Clear older results
-  $spanContainer.innerHTML = ""
-  
-  for(let index = 0; index < totalNumbers; index++) {
+  $spanContainer.innerHTML = "";
+
+  for (let index = 0; index < totalNumbers; index++) {
     // Gerar um número aleatório entre maior e menor valor
-    const resultado = Math.floor(Math.random() * (endNumbers - startNumbers + 1)) + startNumbers
-    
+    const resultado =
+      Math.floor(Math.random() * (endNumbers - startNumbers + 1)) +
+      startNumbers;
+
     // Add resultado no array
-    results.push(resultado)
-    console.log(results)
-    
+    results.push(resultado);
+    console.log(results);
+
     // Gerar um elemento HTML para o resultado
-    const newSpan = document.createElement("span")
-    newSpan.textContent = resultado
-    
+    const newSpan = document.createElement("span");
+    newSpan.classList.add("result-number")
+    newSpan.textContent = resultado;
+
     // Add o elemento no DOM
-    $spanContainer.append(newSpan)
-    
+    $spanContainer.append(newSpan);
+
     // Mudar para o container de resultado
-    $form.classList.add("d-none")
-    $result.classList.remove("d-none")
+    $form.classList.add("d-none");
+    $result.classList.remove("d-none");
   }
 
-  $roundResult.innerHTML = `${round++}º Resultado`
+  $roundResult.innerHTML = `${round++}º Resultado`;
 };
 
 let validateInputs = () => {
@@ -142,4 +144,12 @@ let validateInputs = () => {
     alert("Por Favor, preencha todos os campos.");
     return false;
   }
+};
+
+document.querySelector("#button").addEventListener("click", () => back());
+
+let back = () => {
+  // Mudar para o container de formulário
+  $form.classList.remove("d-none");
+  $result.classList.add("d-none");
 };

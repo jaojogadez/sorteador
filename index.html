@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Numbers - Sorteador</title>
-    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container d-flex align-items-center gap-4 p-5" id="container-logo">
+    <div
+      class="container d-flex align-items-center gap-4 p-5"
+      id="container-logo"
+    >
       <img src="assets/logo.png" alt="Logo do App Numbers" />
       <h2>Numbers</h2>
     </div>
@@ -29,20 +32,38 @@
         <form class="col-md-6 mb-4" method="post">
           <div class="container mb-4">
             <h4>Quero sortear:</h4>
-            <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+            <p>
+              Defina o intervalo e a quantidade de números, clique em "Sortear"
+              e veja os resultados na tela. É rápido e fácil!
+            </p>
           </div>
           <div class="container d-flex mb-4">
             <div class="col-md-3">
               <label for="numbers">Números</label>
-              <input type="text" name="numbers" id="numbers" class="form-control">
+              <input
+                type="text"
+                name="numbers"
+                id="numbers"
+                class="form-control"
+              />
             </div>
             <div class="col-md-3">
               <label for="numbers-start">De</label>
-              <input type="text" name="numbers" id="numbers-start" class="form-control">
+              <input
+                type="text"
+                name="numbers"
+                id="numbers-start"
+                class="form-control"
+              />
             </div>
             <div class="col-md-3">
               <label for="numbers-end">ate</label>
-              <input type="text" name="numbers" id="numbers-end" class="form-control">
+              <input
+                type="text"
+                name="numbers"
+                id="numbers-end"
+                class="form-control"
+              />
             </div>
           </div>
           <div class="d-flex">
@@ -52,23 +73,44 @@
             </div>
             <p>Não repetir número</p>
           </div>
-          <div class="container-md mb-4 ">
-            <button type="submit" class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-1">
+          <div class="container-md mb-4">
+            <button
+              type="submit"
+              class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-1"
+            >
               <p>Sortear</p>
-              <img src="assets/icons/Frame 2.png" alt="icone-seta">
+              <img src="assets/icons/Frame 2.png" alt="icone-seta" />
             </button>
           </div>
         </form>
         <div class="col-md-6 mt-5 mb-4 text-center d-none" id="result">
-          <div class="container mb-4 ">
+          <button id="button" class="mb-4">
+            <svg
+              height="16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              viewBox="0 0 1024 1024"
+            >
+              <path
+                d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"
+              ></path>
+            </svg>
+            <span>Voltar</span>
+          </button>
+          <div class="container mb-4">
             <h4>Resultado do sorteio:</h4>
             <p class="text-uppercase fw-bold">1º Resultado</p>
           </div>
           <div class="container mb-4" id="resultValues"></div>
-          <div class="container-md mb-4 ">
-            <button type="submit" class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-1" onclick="sortearRandomNumber()">
-              <p>Sortear Novamente </p>
-              <img src="assets/icons/Frame 3.png" alt="icone-seta">
+          <div class="container-md mb-4">
+            <button
+              type="submit"
+              class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-1"
+              onclick="sortearRandomNumber()"
+            >
+              <p>Sortear Novamente</p>
+              <img src="assets/icons/Frame 3.png" alt="icone-seta" />
             </button>
           </div>
         </div>

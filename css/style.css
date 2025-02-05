@@ -34,7 +34,7 @@
   --label-medium: bold 20px/150% "Roboto Flex";
   --label-small: bold 16px/150% "Roboto Flex";
 }
-#result span {
+#resultValues span {
   font: var(--display-large);
   color: var(--content-brand);
   margin: 1rem;
@@ -90,12 +90,14 @@ html {
   left: 0;
   top: 0;
 }
-form h4 , #result h4{
+form h4,
+#result h4 {
   font: var(--label-medium);
   color: var(--content-primary);
   text-transform: uppercase;
 }
-form p , #result p{
+form p,
+#result p {
   font: var(--paragraph-large);
   color: var(--content-secondary);
   margin: 0;
@@ -123,12 +125,12 @@ form .form-control:hover {
   color: var(--content-primary);
   background-color: var(--background-secondary);
 }
-form .form-control:focus{
+form .form-control:focus {
   border: 0;
   box-shadow: none;
 }
 form label,
-form .form-control{
+form .form-control {
   align-self: self-start;
 }
 form .switch {
@@ -146,7 +148,7 @@ form .switch button {
   top: 50%;
   left: 50%;
   transform: translateY(-50%);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .toggleMode button {
   left: 0 !important;
@@ -160,13 +162,13 @@ form .switch span {
   height: 20px;
   background-image: linear-gradient(var(--gradient-background));
   border-radius: 16px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 form .btn-primary {
   height: 56px;
   background-color: var(--background-tertiary);
   border: 0;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   position: relative;
   z-index: 1;
   padding: 0;
@@ -191,23 +193,23 @@ form .container-md::before {
   height: 100%;
   position: absolute;
   background: linear-gradient(90deg, var(--gradient-border));
-  border-radius: .45rem;
-  transition: all .4s ease;
+  border-radius: 0.45rem;
+  transition: all 0.4s ease;
   opacity: 0;
   z-index: -1px;
 }
-form .container-md:hover::before{
-  opacity: 1 ;
+form .container-md:hover::before {
+  opacity: 1;
   transform: scale(1.01, 1.1);
 }
-form .btn-primary:active{
+form .btn-primary:active {
   background-color: var(--background-secondary) !important;
 }
 #result .btn-primary {
   height: 56px;
   background-color: var(--background-tertiary);
   border: 0;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   position: relative;
   z-index: 1;
   padding: 0;
@@ -232,21 +234,52 @@ form .btn-primary:active{
   height: 100%;
   position: absolute;
   background: linear-gradient(90deg, var(--gradient-border));
-  border-radius: .45rem;
-  transition: all .4s ease;
+  border-radius: 0.45rem;
+  transition: all 0.4s ease;
   opacity: 0;
   left: 0;
   z-index: -1px;
 }
-#result .container-md:hover::before{
-  opacity: 1 ;
+#result .container-md:hover::before {
+  opacity: 1;
   transform: scale(1.01, 1.1);
 }
-#result .btn-primary:active{
+#result .btn-primary:active {
   background-color: var(--background-secondary) !important;
 }
 #result {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#button {
+  display: flex;
+  width: 100px;
+  padding: 7px 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+}
+
+#button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+#button:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+#button:hover {
+  box-shadow: 9px 9px 33px #d1d1d128, -9px -9px 33px #ffffff10;
+  transform: translateY(-2px);
 }
 @media (max-width: 768px) {
   .container h1 {
@@ -264,3 +297,4 @@ form .btn-primary:active{
     font-size: 40px !important;
   }
 }
+
