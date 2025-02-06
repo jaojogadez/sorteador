@@ -292,10 +292,6 @@ form .btn-primary:active {
   }
 }
 
-#resultValues{
-  border: 1px solid white;
-  height: 200px;
-}
 
 .result-number {
   width: 7rem;
@@ -307,7 +303,7 @@ form .btn-primary:active {
   align-items: center;
   justify-content: center;
   color: var(--content-brand);
-  animation-name: rotateSquareFirst;
+  animation-name: rotateSquare;
   animation-duration: 4s;
   animation-delay: 0s;
   animation-fill-mode: both;

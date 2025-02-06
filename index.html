@@ -29,7 +29,7 @@
             <h1 class="w-100">Sorteador de Números</h1>
           </div>
         </div>
-        <form class="col-md-6 mb-4 d-none" method="post">
+        <form class="col-md-6 mb-4" method="post">
           <div class="container mb-4">
             <h4>Quero sortear:</h4>
             <p>
@@ -83,7 +83,7 @@
             </button>
           </div>
         </form>
-        <div class="col-md-6 mt-5 mb-4 text-center d-block" id="result">
+        <div class="col-md-6 mt-5 mb-4 text-center d-none" id="result">
           <button id="button" class="mb-4">
 
             <span>Voltar</span>
@@ -92,8 +92,7 @@
             <h4>Resultado do sorteio:</h4>
             <p class="text-uppercase fw-bold">1º Resultado</p>
           </div>
-          <div class="container mb-4 d-flex justify-content-center align-items-center" id="resultValues">
-            <span class="result-number">10</span>
+          <div class="container mb-4 d-flex justify-content-center align-items-center flex-wrap" id="resultValues">
           </div>
           <div class="container-md mb-4">
             <button
