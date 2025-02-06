@@ -34,12 +34,6 @@
   --label-medium: bold 20px/150% "Roboto Flex";
   --label-small: bold 16px/150% "Roboto Flex";
 }
-#resultValues span {
-  font: var(--display-large);
-  color: var(--content-brand);
-  margin: 1rem;
-  font-size: 3em;
-}
 body,
 html {
   background: var(--background-primary) url("../assets/Shapes.png") repeat
@@ -295,5 +289,57 @@ form .btn-primary:active {
 @media (max-width: 546px) {
   .container h1 {
     font-size: 40px !important;
+  }
+}
+
+#resultValues{
+  border: 1px solid white;
+  height: 200px;
+}
+
+.result-number {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 20px;
+  background: transparent;
+  font: var(--display-large);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--content-brand);
+  animation-name: rotateSquareFirst;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotateSquareFirst {
+  0%{
+    transform: scale(.5) rotate(0);
+    opacity: 0;
+    color: black;
+    background: #c58de7;
+  }
+  50%, 90%{
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+    font-size: 4em;
+  }
+  90%, 100%{
+    transform: translateX(-50px);
+  }
+}
+@keyframes rotateSquare {
+  0%{
+    transform: scale(.5) rotate(0);
+    opacity: 0;
+    color: black;
+    background: #c58de7;
+  }
+  50%, 100%{
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+    font-size: 4em;
   }
 }
