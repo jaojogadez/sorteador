@@ -1,3 +1,5 @@
+"use-strict";
+
 /* HTML ELEMENTS */
 const $items = document.querySelector(".order-2");
 const $title = document.querySelector("#title");
@@ -39,6 +41,7 @@ const $btnReloadRandomNumber = document.querySelector("#result button");
 /* RESULTADO DO SORTEIO */
 const $resultOne = document.querySelector("#numberOne");
 const $resultTwo = document.querySelector("#numberTwo");
+
 
 // ADD FUNÇÃO AO SWITCH
 $switchButton.onclick = () => toggleMode();
@@ -109,31 +112,49 @@ let sortearRandomNumber = () => {
 
   // Clear older results
   $spanContainer.innerHTML = "";
+  results.length = 0;
 
   for (let index = 0; index < totalNumbers; index++) {
+    let resultado = 0;
     // Gerar um número aleatório entre maior e menor valor
-    const resultado =
-      Math.floor(Math.random() * (endNumbers - startNumbers + 1)) +
-      startNumbers;
+    if ($switchButton.classList.contains("toggleMode")) {
+      resultado =
+        Math.floor(Math.random() * (endNumbers - startNumbers + 1)) +
+        startNumbers;
+    } else {
+      do {
+        resultado =
+          Math.floor(Math.random() * (endNumbers - startNumbers + 1)) +
+          startNumbers;
+      } while (results.includes(resultado));
+    }
 
     // Add resultado no array
     results.push(resultado);
     console.log(results);
-
-    // Gerar um elemento HTML para o resultado
-    const newSpan = document.createElement("span");
-    newSpan.classList.add("result-number")
-    newSpan.textContent = resultado;
-
-    // Add o elemento no DOM
-    $spanContainer.append(newSpan);
-
-    // Mudar para o container de resultado
-    $form.classList.add("d-none");
-    $result.classList.remove("d-none");
   }
 
   $roundResult.innerHTML = `${round++}º Resultado`;
+
+  let i = 0;
+  const interval = setInterval(() => {
+    if (i < results.length) {
+      // Gerar um elemento HTML para o resultado
+      const newSpan = document.createElement("span");
+      newSpan.classList.add("result-number");
+      newSpan.textContent = results[i];
+
+      // Add o elemento no DOM
+      $spanContainer.append(newSpan);
+      i++
+    } else {
+      clearInterval(interval)
+    }
+  }, 500);
+
+  // Mudar para o container de resultado
+  $form.classList.add("d-none");
+  $result.classList.remove("d-none");
 };
 
 let validateInputs = () => {
