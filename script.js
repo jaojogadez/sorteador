@@ -36,7 +36,7 @@ const inputs = Array.from($inputs);
 const $totalNumbers = document.getElementById("numbers");
 const $startNumbers = document.getElementById("numbers-start");
 const $endNumbers = document.getElementById("numbers-end");
-const $btnReloadRandomNumber = document.querySelector("#result button");
+const $btnReloadRandomNumber = document.querySelector("#restartSorteio");
 
 /* RESULTADO DO SORTEIO */
 const $resultOne = document.querySelector("#numberOne");
@@ -139,16 +139,18 @@ let sortearRandomNumber = () => {
   let i = 0;
   const interval = setInterval(() => {
     if (i < results.length) {
+      $btnReloadRandomNumber.style.opacity = 0;
       // Gerar um elemento HTML para o resultado
       const newSpan = document.createElement("span");
       newSpan.classList.add("result-number");
       newSpan.textContent = results[i];
-
+      
       // Add o elemento no DOM
       $spanContainer.append(newSpan);
       i++
     } else {
       clearInterval(interval)
+      $btnReloadRandomNumber.style.opacity = 1;
     }
   }, 500);
 

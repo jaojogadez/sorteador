@@ -84,9 +84,8 @@
           </div>
         </form>
         <div class="col-md-6 mt-5 mb-4 text-center d-none" id="result">
-          <button id="button" class="mb-4">
-
-            <span>Voltar</span>
+          <button id="button" class="mb-4 btn btn-primary btn-sm">
+            <i class="bi bi-arrow-left"></i> <span style="margin-left: 7px;">Voltar</span>
           </button>
           <div class="container mb-4">
             <h4>Resultado do sorteio:</h4>
@@ -99,6 +98,7 @@
               type="submit"
               class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-1"
               onclick="sortearRandomNumber()"
+              id="restartSorteio"
             >
               <p>Sortear Novamente</p>
               <img src="assets/icons/Frame 3.png" alt="icone-seta" />
