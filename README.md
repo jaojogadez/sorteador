@@ -2,6 +2,8 @@
 
 Uma aplicação web simples para sortear números aleatórios.
 
+![Template Projeto (1)](https://github.com/user-attachments/assets/5b8e3323-4317-4d29-aca0-a04728646fd5)
+
 🔗 Acesse o projeto: [https://jaojogadez.github.io/sorteador/]
 
 ## ✨ Recursos
