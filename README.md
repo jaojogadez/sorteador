@@ -2,6 +2,8 @@
 
 Uma aplicação web simples para sortear números aleatórios.
 
+🔗 Acesse o projeto: [https://jaojogadez.github.io/sorteador/]
+
 ## ✨ Recursos
 
 * 🎯 Gera números aleatórios dentro de um intervalo especificado.
@@ -42,8 +44,7 @@ Uma aplicação web simples para sortear números aleatórios.
 6. 🔄 Clique em "Sortear Novamente" para gerar um novo conjunto ou ⬅️ "Voltar" para retornar ao formulário.
 
 ## 🖼️ Imagens do Projeto
-
-(Adicione aqui screenshots do projeto para melhor visualização.)
+![image](https://github.com/user-attachments/assets/fa1fc52b-054d-4b05-a6bf-463e7627cade)
 
 ## 📚 Documentação da API
 
