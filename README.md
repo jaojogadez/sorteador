@@ -45,6 +45,10 @@ Uma aplicação web simples para sortear números aleatórios.
 
 ## 🖼️ Imagens do Projeto
 ![image](https://github.com/user-attachments/assets/fa1fc52b-054d-4b05-a6bf-463e7627cade)
+![image](https://github.com/user-attachments/assets/73b39e34-e309-4e87-b87d-17e7366ea695)
+![image](https://github.com/user-attachments/assets/d2580e8a-6d28-410c-ae2c-ab0d93ab9747)
+
+
 
 ## 📚 Documentação da API
 
