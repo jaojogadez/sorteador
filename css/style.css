@@ -133,8 +133,10 @@ form .switch {
   cursor: pointer;
 }
 form .switch button {
-  width: 14px !important;
-  height: 14px !important;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
   background: var(--content-primary);
   border: 0;
   border-radius: 50%;
@@ -142,8 +144,12 @@ form .switch button {
   z-index: 1;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%);
+  transform: translate(-0%, -50%);
   transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  outline: 1px solid red;
 }
 .toggleMode button {
   left: 0 !important;
