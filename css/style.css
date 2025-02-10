@@ -108,6 +108,10 @@ form label {
   text-transform: uppercase;
   margin-bottom: 0.2rem;
 }
+form .col-md-3 {
+  max-width: min-content;
+  text-align: center;
+}
 form .form-control {
   background-color: var(--background-secondary) !important;
   color: var(--content-primary) !important;
@@ -123,6 +127,9 @@ form .form-control:hover {
 form .form-control:focus {
   border: 0;
   box-shadow: none;
+  position: relative;
+  z-index: 2;
+  outline: 2px solid var(--accent-blue);
 }
 form label,
 form .form-control {
