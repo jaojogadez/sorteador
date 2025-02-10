@@ -149,7 +149,6 @@ form .switch button {
   overflow: hidden;
   box-sizing: border-box;
   padding: 0;
-  outline: 1px solid red;
 }
 .toggleMode button {
   left: 0 !important;
